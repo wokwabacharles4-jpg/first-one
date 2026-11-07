@@ -5,56 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account Form</title>
     <style>
-        body{
-            align-items: center;
-            background:linear-gradient(to right,#435c91,#e5e6eb);
+        * {
+            box-sizing: border-box;
         }
-        .details{
-            background-color:rgb(133, 182, 174);
-            padding: 24px;
-            width:700px;
-            margin-left: 100px;
-            margin-right: 100px;
-           /* border-color:yellow;*/
+        html {
+            min-height: 100%;
+            background: linear-gradient(to right, #435c91, #e5e6eb) no-repeat fixed;
+            background-size: cover;
+        }
+        body {
+            margin: 0;
+            padding: 20px 16px 40px;
+            min-height: 100vh;
+        }
+        .page {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+        h1 {
+            color: aqua;
+            text-align: center;
+            font-size: 1.6rem;
+        }
+        p {
+            text-align: center;
+        }
+        .details {
+            background-color: rgb(133, 182, 174);
+            padding: 24px 16px;
+            width: 100%;
             border-radius: 24px;
         }
-        .createAccountButtons button{
-            background-color:rgb(129, 146, 146);
-            padding:15px;
-            border-radius:24px;
-            margin-left: 150px;
-            margin-right: 240px;
-        }
-        .createAccountButtons button:hover{
-            background-color:rgb(213, 203, 223);    
-        }
-        h1{
-            color:aqua;
-            text-align: center;
-        }
-        p{
-            text-align: center;
-        }
-        .details input[type="text"],.details input[type="email"], .details input[type="password"]{
-            padding:12px;
+        .details input[type="text"],
+        .details input[type="email"],
+        .details input[type="password"] {
+            padding: 12px;
             border-radius: 10px;
-            width:60%;
-            
+            width: 90%;
+            font-size: 16px;
+            border: 1px solid #777;
+            margin-top: 6px;
         }
-        img{
-            display:block;
-            margin-left:auto;
-            margin-right:auto;
+        .createAccountButtons {
+            text-align: center;
+        }
+        .createAccountButtons button {
+            background-color: rgb(129, 146, 146);
+            padding: 15px;
+            border-radius: 24px;
+            border: 1px solid #333;
+            font-size: 14px;
+            margin: 6px;
+            cursor: pointer;
+        }
+        .createAccountButtons button:hover {
+            background-color: rgb(213, 203, 223);
         }
     </style>
 </head>
 <body>
-    <img width="500" height="250" src="file_0000000015f481f48623d80b7186d46c.png"></img>
-    <h1>You are welcome.........</h1>
-    <p><strong>Please enter your details for account creation</strong></p>
-    <main>
-        <div>
-            <form action="minetoo.html" method="post">
+    <div class="page">
+        <img src="file_0000000015f481f48623d80b7186d46c.png" alt="Innovaplex Group of Companies logo">
+        <h1>You are welcome.........</h1>
+        <p><strong>Please enter your details for account creation</strong></p>
+        <main>
+            <form action="minetoo.html" method="get">
                 <div class="details">
                     <div>
                         <label for="firstName">First Name:</label>
@@ -62,53 +85,24 @@
                         <input type="text" id="firstName" name="firstName" placeholder="enter first name" required>
                     </div>
                     <br>
-                     <div>
+                    <div>
                         <label for="lastName">Last Name:</label>
                         <br>
                         <input type="text" id="lastName" name="lastName" placeholder="enter last name" required>
                     </div>
                     <br>
-                     <div>
+                    <div>
                         <label for="middleName">Middle Name:</label>
                         <br>
                         <input type="text" id="middleName" name="middleName" placeholder="enter middle name if any">
                     </div>
                     <br>
-                     <div>
+                    <div>
                         <label for="email">Email:</label>
                         <br>
                         <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
                     </div>
                     <br>
-                     <div>
+                    <div>
                         <label for="password">Password:</label>
                         <br>
-                        <input type="password" id="password" name="password" placeholder="type password here" required>
-                    </div>
-                    <label for="gender">Gender</label>
-                     <div>
-                        <input type="radio" id="male" name="gender">
-                        <label for="male">Male</label>
-                    
-                    
-                        <input type="radio" id="female" name="gender">
-                        <label for="female">Female</label>
-                    
-                    
-                        <input type="radio" id="others" name="gender">
-                        <label for="others">Others</label>
-                    
-                     </div>
-                        
-                </div>
-                <br>
-                <div class="createAccountButtons">
-                    <button type="button">Save Details</button>
-                    <button type="button">Cancel</button>
-
-                </div>
-            </form>
-        </div>
-    </main>
-</body>
-</html>
