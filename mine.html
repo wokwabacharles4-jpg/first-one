@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        img{
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        body{
+            background:linear-gradient(to right,#435c91,#e5e6eb);
+            align-items: center;
+            justify-content: center;
+            height:100vh;
+            margin: 100px;
+        }
+        h1{
+            text-align:center;
+            width:100%;
+            background-color: rgb(212, 212, 218);
+            border-radius: 10px;
+            font-style: italic;
+            font-weight: bolder;
+            color:blue;
+        }
+        p{
+            font-style:normal;
+            text-align:center;
+
+        }
+        .loginBox{
+            background-color: rgb(132, 134, 145);
+            border-radius: 9px;
+            text-align:center;
+            padding:25px;
+            width:70%;
+            height: 100%;
+            margin-left:100px;
+            margin-right:100px;
+            
+            
+        }
+        .buttonBox button:hover{
+            background-color: rgb(148, 182, 196);
+            
+
+        }
+        .buttonBox button{
+            background-color:rgb(76, 131, 131);
+            padding:10px;
+            font: size 12px;
+            border-radius:20px;
+            width:50%;
+            margin-left:200px;
+            margin-right: 300px;
+        }
+        .loginBox input[type="text"],input[type="password"]{
+            width:70%;
+            background-color: antiquewhite;
+            margin:auto;
+            border-radius: 12px;
+            padding:15px;
+        }
+        .createAccountContainer button:hover{
+            background-color:rgb(148, 182, 196);
+        }
+        .createAccountContainer button{
+            background-color:rgb(32, 92, 148);
+            padding:10px;
+            border-radius:24px;
+            margin-left: 300px;
+            margin-right: 300px;
+        }
+        form p{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <img width="500" length="250" src="file_0000000015f481f48623d80b7186d46c.png"></img>
+   <h1>Welcome to the Login page!</h1> 
+   <p><strong>Please enter your login details below.</strong></p>
+   <form action="mine.html" method="post">
+    <div class="loginBox">
+        <div>
+             <label for="name">Username</label>
+        <input type="text" name="name" id="name" placeholder="username" required>
+        </div>
+       
+
+        <br>
+        <div>
+            <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="password" maxlength="10" required>
+        </div>
+        
+    </div>
+    <br>
+    <div class="buttonBox">
+        <div><button type="reset"><strong>Clear</strong></button></div>
+    <br>
+    <div><button type="submit"><strong>Login</strong></button></div>
+    </div>
+    <br>
+    <p><strong>First interaction, please signup by creating an account.</strong></p>
+    <div class="createAccountContainer">
+        <button type="button" onclick="window.location.href='minetoo.html'"><strong>SignUp</strong></button>
+    </div>
+   </form>
+</body>
+</html>
