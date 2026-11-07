@@ -5,110 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
-        img{
-            display:block;
-            margin-left: auto;
-            margin-right: auto;
+        * {
+            box-sizing: border-box;
         }
-        body{
-            background:linear-gradient(to right,#435c91,#e5e6eb);
-            align-items: center;
-            justify-content: center;
-            height:100vh;
-            margin: 100px;
+        html {
+            min-height: 100%;
+            background: linear-gradient(to right, #435c91, #e5e6eb) no-repeat fixed;
+            background-size: cover;
         }
-        h1{
-            text-align:center;
-            width:100%;
+        body {
+            margin: 0;
+            padding: 20px 16px 40px;
+            min-height: 100vh;
+        }
+        .page {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+        h1 {
+            text-align: center;
+            width: 100%;
             background-color: rgb(212, 212, 218);
             border-radius: 10px;
             font-style: italic;
             font-weight: bolder;
-            color:blue;
+            color: blue;
+            font-size: 1.6rem;
+            padding: 8px;
         }
-        p{
-            font-style:normal;
-            text-align:center;
-
+        p {
+            font-style: normal;
+            text-align: center;
         }
-        .loginBox{
+        .loginBox {
             background-color: rgb(132, 134, 145);
             border-radius: 9px;
-            text-align:center;
-            padding:25px;
-            width:70%;
-            height: 100%;
-            margin-left:100px;
-            margin-right:100px;
-            
-            
+            text-align: center;
+            padding: 25px 15px;
+            width: 100%;
         }
-        .buttonBox button:hover{
-            background-color: rgb(148, 182, 196);
-            
-
-        }
-        .buttonBox button{
-            background-color:rgb(76, 131, 131);
-            padding:10px;
-            font: size 12px;
-            border-radius:20px;
-            width:50%;
-            margin-left:200px;
-            margin-right: 300px;
-        }
-        .loginBox input[type="text"],input[type="password"]{
-            width:70%;
+        .loginBox input[type="text"],
+        .loginBox input[type="password"] {
+            width: 85%;
             background-color: antiquewhite;
-            margin:auto;
+            margin: 6px auto 0;
             border-radius: 12px;
-            padding:15px;
+            padding: 15px;
+            border: 1px solid #999;
+            font-size: 16px;
         }
-        .createAccountContainer button:hover{
-            background-color:rgb(148, 182, 196);
+        .buttonBox,
+        .createAccountContainer {
+            text-align: center;
         }
-        .createAccountContainer button{
-            background-color:rgb(32, 92, 148);
-            padding:10px;
-            border-radius:24px;
-            margin-left: 300px;
-            margin-right: 300px;
+        .buttonBox div {
+            margin-bottom: 14px;
         }
-        form p{
-            text-align:center;
+        .buttonBox button {
+            background-color: rgb(76, 131, 131);
+            padding: 12px;
+            border-radius: 20px;
+            width: 50%;
+            max-width: 200px;
+            border: 1px solid #333;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .buttonBox button:hover {
+            background-color: rgb(148, 182, 196);
+        }
+        .createAccountContainer button {
+            background-color: rgb(32, 92, 148);
+            padding: 12px 24px;
+            border-radius: 24px;
+            border: 1px solid #333;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .createAccountContainer button:hover {
+            background-color: rgb(148, 182, 196);
         }
     </style>
 </head>
 <body>
-    <img width="500" length="250" src="file_0000000015f481f48623d80b7186d46c.png"></img>
-   <h1>Welcome to the Login page!</h1> 
-   <p><strong>Please enter your login details below.</strong></p>
-   <form action="mine.html" method="post">
-    <div class="loginBox">
-        <div>
-             <label for="name">Username</label>
-        <input type="text" name="name" id="name" placeholder="username" required>
-        </div>
-       
-
-        <br>
-        <div>
-            <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="password" maxlength="10" required>
-        </div>
-        
+    <div class="page">
+        <img src="file_0000000015f481f48623d80b7186d46c.png" alt="Innovaplex Group of Companies logo">
+        <h1>Welcome to the Login page!</h1>
+        <p><strong>Please enter your login details below.</strong></p>
+        <form action="mine.html" method="get">
+            <div class="loginBox">
+                <div>
+                    <label for="name">Username</label><br>
+                    <input type="text" name="name" id="name" placeholder="username" required>
+                </div>
+                <br>
+                <div>
+                    <label for="password">Password</label><br>
+                    <input type="password" id="password" name="password" placeholder="password" maxlength="10" required>
+                </div>
+            </div>
+            <br>
+            <div class="buttonBox">
+                <div><button type="reset"><strong>Clear</strong></button></div>
+                <div><button type="submit"><strong>Login</strong></button></div>
+            </div>
+            <p><strong>First interaction, please signup by creating an account.</strong></p>
+            <div class="createAccountContainer">
+                <button type="button" onclick="window.location.href='minetoo.html'"><strong>SignUp</strong></button>
+            </div>
+        </form>
     </div>
-    <br>
-    <div class="buttonBox">
-        <div><button type="reset"><strong>Clear</strong></button></div>
-    <br>
-    <div><button type="submit"><strong>Login</strong></button></div>
-    </div>
-    <br>
-    <p><strong>First interaction, please signup by creating an account.</strong></p>
-    <div class="createAccountContainer">
-        <button type="button" onclick="window.location.href='minetoo.html'"><strong>SignUp</strong></button>
-    </div>
-   </form>
 </body>
 </html>
